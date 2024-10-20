@@ -245,7 +245,7 @@ $(function () {
   // function
 });
 </script>
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <style>
 h1 {
@@ -284,16 +284,18 @@ h1::after {
     bottom: -5px;
 }
 
-body{
-  background: linear-gradient(-45deg, #f9c2eb, #a8c2ee, #c2f9d0, #ffdea5) fixed;
-  background-size: 800% 800%;
-  animation: GradietionAnimation 9s ease infinite;
+html {
+    background-color: #;
 }
 
-@keyframes GradietionAnimation { 
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+body {
+    background-color: #fff;
+    padding: 30px 30px 30px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
+    border-radius: 3px;
+    position: relative;
 }
 
 img {
@@ -367,6 +369,34 @@ ul {
 <a href="https://b.hatena.ne.jp/entry/s/https://simasimanekosan.github.io/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><div class="line-it-button" data-lang="ja" data-type="share-a" data-env="REAL" data-url="https://simasimanekosan.github.io/" data-color="default" data-size="small" data-count="false" data-ver="3" style="display: none;"></div>
 <script async defer src="https://buttons.github.io/buttons.js"><script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
 <a class="github-button" href="https://github.com/simasimanekonya" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Follow @simasimanekonya on GitHub">simasimanekonya をフォロー</a>
-
+<p>自分がロボットでないか確認</p>
+<form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
 </body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyD8LgMyY25cHx5WQcjfxmMD6ViToaKWCHk",
+    authDomain: "anly-simaneko.firebaseapp.com",
+    projectId: "anly-simaneko",
+    storageBucket: "anly-simaneko.appspot.com",
+    messagingSenderId: "101010237548",
+    appId: "1:101010237548:web:24547afa53960444e95049",
+    measurementId: "G-C26RF3Y54K"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </html>
