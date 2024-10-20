@@ -199,19 +199,22 @@ color:#0000ff;
 <br>
 <span style="color:white;font-size:50px">しまねこのホームページ</span>
 <br>
-<span style="color:white;font-size:40px">最近フォントを気まぐれに変えています。</span>
+<span style="color:white;font-size:40px">マイクラサーバー作りました。</span>
 <br>
-<span style="color:white;font-size:40px">(現在のフォント:けいフォント)</span>
+<span style="color:white;font-size:40px">ip近日公開予定</span>
 <br>
-<span style="color:white;font-size:40px">更新時刻 9月27日 19時</span>
+<span style="color:white;font-size:40px">更新時刻 10月20日 20時</span>
 <br>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="/favicon.ico" id="favicon">
-	<title>ホームページ</title>
-	<script>console.log("simasimanekosanのホームページです。\n更新するのでブックマークに登録してください")</script>
+	<title>しまねこのホームページ</title>
+	<script>
+	console.log("%cしまねこのホームページ", "color: #02e687; font-size: 600%; font-weight:bold;text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83333px 0.983333px 0px, rgb(0, 0, 0) 2.35px 1.85px 0px, rgb(0, 0, 0) 1.61667px 2.51667px 0px, rgb(0, 0, 0) 0.7px 2.91667px 0px, rgb(0, 0, 0) -0.283333px 2.98333px 0px, rgb(0, 0, 0) -1.25px 2.73333px 0px, rgb(0, 0, 0) -2.06667px 2.16667px 0px, rgb(0, 0, 0) -2.66667px 1.36667px 0px, rgb(0, 0, 0) -2.96667px 0.416667px 0px, rgb(0, 0, 0) -2.95px -0.566667px 0px, rgb(0, 0, 0) -2.6px -1.5px 0px, rgb(0, 0, 0) -1.96667px -2.26667px 0px, rgb(0, 0, 0) -1.11667px -2.78333px 0px, rgb(0, 0, 0) -0.133333px -3px 0px, rgb(0, 0, 0) 0.85px -2.88333px 0px, rgb(0, 0, 0) 1.75px -2.43333px 0px, rgb(0, 0, 0) 2.45px -1.73333px 0px, rgb(0, 0, 0) 2.88333px -0.833333px 0px;");
+	console.log("%cconsoleだよ！ (ΦωΦ)", "color: green; font-weight:bold;");
+	</script>
 <!--　
 <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"></script>
 <script>Push.create('simasimanekosanのホームページからのお知らせ', {
@@ -221,7 +224,7 @@ color:#0000ff;
 　　vibrate: [100, 100, 100], // モバイル端末でのバイブレーション秒数
 　　onClick: function() {
 　　　　// 通知がクリックされた場合の設定
-　　　　console.log(this);
+　　　　console.log();
 　　}
 });
 </script>
@@ -244,7 +247,6 @@ $(function () {
 </script>
 
 </head>
-<!--css-->
 <style>
 h1 {
     font-weight: normal;
@@ -281,19 +283,17 @@ h1::after {
     margin: auto;
     bottom: -5px;
 }
- 
-html {
-    background-color: #5af287;
+
+body{
+  background: linear-gradient(-45deg, #f9c2eb, #a8c2ee, #c2f9d0, #ffdea5) fixed;
+  background-size: 800% 800%;
+  animation: GradietionAnimation 9s ease infinite;
 }
 
-body {
-    background-color: #fff;
-    padding: 30px 30px 30px;
-    max-width: 700px;
-    margin: 20px auto;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
-    border-radius: 3px;
-    position: relative;
+@keyframes GradietionAnimation { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
 img {
