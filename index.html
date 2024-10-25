@@ -398,4 +398,12 @@ ul {
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lcy22sqAAAAANzjIBbt3UqJVT0HOW4gJ0hi2xi3"></script>
+<script>
+grecaptcha.ready(function() {
+  grecaptcha.execute('6Lcy22sqAAAAANzjIBbt3UqJVT0HOW4gJ0hi2xi3', {action: 'actionvb'}).then(function(token) {
+     // test v3
+  });
+});
+</script> 
 </html>
