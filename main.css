@@ -1,0 +1,250 @@
+@font-face { 
+
+  font-family: "keifont"; 
+  src: url("./keifont.ttf") format("truetype");
+}
+
+body{ 
+  font-family: "keifont"; 
+}
+
+.header {
+  position: sticky; /* headerを追従にする */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+.logo {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.logo2 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.logo_a {
+  color: #59ffe6;
+  text-decoration: none;
+}
+
+/* ハンバーガーボタンのデザイン */
+.drawer__button {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999; /* メニューを開いている時もクリックできるよう設定 */
+}
+/* ハンバーガーボタン内の線 */
+.drawer__button > span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 2px;
+  background-color: black;
+  transform: translateX(-50%);
+}
+.drawer__button > span:first-child {
+  transform: translate(-50%, calc(-50% - 0.5rem));
+  transition: transform 0.3s ease;
+}
+.drawer__button > span:nth-child(2) {
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+.drawer__button > span:last-child {
+  transform: translate(-50%, calc(-50% + 0.5rem));
+  transition: transform 0.3s ease;
+}
+/* 展開時のデザイン */
+.drawer__button.active > span:first-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.drawer__button.active > span:nth-child(2) {
+  opacity: 0;
+}
+.drawer__button.active > span:last-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+/* メニューのデザイン */
+.drawer__nav {
+  position: fixed; /* 追従ヘッダーなどでも表示できるよう設定しておく */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.drawer__nav.active {
+  opacity: 1;
+  visibility: visible;
+}
+.drawer__nav__inner {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  padding: 4rem 1.5rem 1rem;
+  margin: 0 0 0 auto;
+  overflow: scroll;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+.drawer__nav.active .drawer__nav__inner {
+  transform: translateX(0);
+}
+.drawer__nav__menu {
+  list-style: none;
+  padding-left: 0;
+}
+.drawer__nav__link {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  border-bottom: solid 1px lightgray;
+}
+
+/* ハンバーガーメニュー展開時、背景を固定 */
+body.active {
+  height: 100%;
+  overflow: hidden;
+}
+
+.bokin a {
+color:#0000ff;
+}
+
+h1 {
+    font-weight: normal;
+    padding-bottom: 10px;
+    text-align: center;
+    position: relative;
+    margin: 0 0 30px 0;
+    letter-spacing: 5px;
+}
+
+button {
+    color: #fff;
+    text-decoration: none;
+    background-color: #F44336;
+    display: block;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 0 0 #9e2b23;
+    font-weight: bold;
+    width: 300px;
+    text-align: center;
+    margin: 110px auto 0;
+    letter-spacing: 2px;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    border-bottom: solid 5px #21f364;
+    position: absolute;
+    width: 100px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: -5px;
+}
+
+html {
+    background-color: #;
+}
+
+body {
+    background-color: #fff;
+    padding: 30px 30px 30px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
+    border-radius: 3px;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.inner {
+max-width: 1000px;
+margin: 0 auto;
+padding: 0 40px;
+box-sizing: content-box;
+}
+
+.header {
+background: #fff;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+}
+
+.header-inner {
+display: flex;
+align-items: center;
+}
+
+.header-title a{
+color: #4a47ff;
+font-size: 24px;
+font-weight: bold;
+}
+
+.header-nav {
+margin-left: auto;
+}
+
+.header-nav-list {
+display: flex;
+}
+
+.header-nav-item:not(:first-child){
+margin-left: 40px;
+}
+
+.header-nav-item-link {
+display: block;
+color: #4a47ff;
+height: 80px;
+line-height: 80px;
+}
+
+body {
+  background: #00ff15;
+}
+
+.bokin a {
+  color:#05f5cd;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  cursor: url(1.png), default;
+}
