@@ -7,143 +7,6 @@
 <a href="https://www.microsoft.com/ja-jp/edge/download">Edgeをダウンロード<a>
 <a href="https://www.mozilla.org/ja/firefox/new/">Firefoxをダウンロード<a>
 </noscript>
-<style>
-@font-face { 
-
-  font-family: "keifont"; 
-  src: url("./keifont.ttf") format("truetype");
-}
-
-body{ 
-  font-family: "keifont"; 
-}
-
-.header {
-  position: sticky; /* headerを追従にする */
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background-color: white;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-}
-.header__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-}
-.logo {
-  font-size: 1.25em;
-  font-weight: bold;
-}
-.logo2 {
-  font-size: 1.25em;
-  font-weight: bold;
-}
-.logo_a {
-  color: #59ffe6;
-  text-decoration: none;
-}
-
-/* ハンバーガーボタンのデザイン */
-.drawer__button {
-  position: relative;
-  width: 3rem;
-  height: 3rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 999; /* メニューを開いている時もクリックできるよう設定 */
-}
-/* ハンバーガーボタン内の線 */
-.drawer__button > span {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 2rem;
-  height: 2px;
-  background-color: black;
-  transform: translateX(-50%);
-}
-.drawer__button > span:first-child {
-  transform: translate(-50%, calc(-50% - 0.5rem));
-  transition: transform 0.3s ease;
-}
-.drawer__button > span:nth-child(2) {
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease;
-}
-.drawer__button > span:last-child {
-  transform: translate(-50%, calc(-50% + 0.5rem));
-  transition: transform 0.3s ease;
-}
-/* 展開時のデザイン */
-.drawer__button.active > span:first-child {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-.drawer__button.active > span:nth-child(2) {
-  opacity: 0;
-}
-.drawer__button.active > span:last-child {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-/* メニューのデザイン */
-.drawer__nav {
-  position: fixed; /* 追従ヘッダーなどでも表示できるよう設定しておく */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
-}
-.drawer__nav.active {
-  opacity: 1;
-  visibility: visible;
-}
-.drawer__nav__inner {
-  position: relative;
-  width: 80%;
-  height: 100%;
-  background-color: white;
-  padding: 4rem 1.5rem 1rem;
-  margin: 0 0 0 auto;
-  overflow: scroll;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-}
-.drawer__nav.active .drawer__nav__inner {
-  transform: translateX(0);
-}
-.drawer__nav__menu {
-  list-style: none;
-  padding-left: 0;
-}
-.drawer__nav__link {
-  display: block;
-  color: black;
-  text-decoration: none;
-  padding: 1rem 1rem;
-  border-bottom: solid 1px lightgray;
-}
-
-/* ハンバーガーメニュー展開時、背景を固定 */
-body.active {
-  height: 100%;
-  overflow: hidden;
-}
-
-.bokin a {
-color:#0000ff;
-}
-
-
-
-</style>
 <header class="header">
   <div class="header__inner">
     <div class="logo"><a class="logo_a" href="/">しまねこのホームページ</a></div>
@@ -202,7 +65,7 @@ color:#0000ff;
 <br>
 <span style="color:white;font-size:40px">ip近日公開予定</span>
 <br>
-<span style="color:white;font-size:40px">更新時刻 10月20日 20時</span>
+<span style="color:white;font-size:40px">更新時刻 11月6日 19時</span>
 <br>
 <head>
 	<meta charset="utf-8">
@@ -214,6 +77,7 @@ color:#0000ff;
 	console.log("%cしまねこのホームページ", "color: #02e687; font-size: 600%; font-weight:bold;text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83333px 0.983333px 0px, rgb(0, 0, 0) 2.35px 1.85px 0px, rgb(0, 0, 0) 1.61667px 2.51667px 0px, rgb(0, 0, 0) 0.7px 2.91667px 0px, rgb(0, 0, 0) -0.283333px 2.98333px 0px, rgb(0, 0, 0) -1.25px 2.73333px 0px, rgb(0, 0, 0) -2.06667px 2.16667px 0px, rgb(0, 0, 0) -2.66667px 1.36667px 0px, rgb(0, 0, 0) -2.96667px 0.416667px 0px, rgb(0, 0, 0) -2.95px -0.566667px 0px, rgb(0, 0, 0) -2.6px -1.5px 0px, rgb(0, 0, 0) -1.96667px -2.26667px 0px, rgb(0, 0, 0) -1.11667px -2.78333px 0px, rgb(0, 0, 0) -0.133333px -3px 0px, rgb(0, 0, 0) 0.85px -2.88333px 0px, rgb(0, 0, 0) 1.75px -2.43333px 0px, rgb(0, 0, 0) 2.45px -1.73333px 0px, rgb(0, 0, 0) 2.88333px -0.833333px 0px;");
 	console.log("%cconsoleだよ！ (ΦωΦ)", "color: green; font-weight:bold;");
 	</script>
+	<link rel=”stylesheet” href=”main.css”>
 <!--　
 <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"></script>
 <script>Push.create('simasimanekosanのホームページからのお知らせ', {
@@ -246,124 +110,9 @@ $(function () {
 </script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-<style>
-h1 {
-    font-weight: normal;
-    padding-bottom: 10px;
-    text-align: center;
-    position: relative;
-    margin: 0 0 30px 0;
-    letter-spacing: 5px;
-}
-
-button {
-    color: #fff;
-    text-decoration: none;
-    background-color: #F44336;
-    display: block;
-    padding: 15px 25px;
-    border-radius: 5px;
-    box-shadow: 0 4px 0 0 #9e2b23;
-    font-weight: bold;
-    width: 300px;
-    text-align: center;
-    margin: 110px auto 0;
-    letter-spacing: 2px;
-}
-
-h1::after {
-    content: "";
-    display: block;
-    border-bottom: solid 5px #21f364;
-    position: absolute;
-    width: 100px;
-    right: 0;
-    left: 0;
-    margin: auto;
-    bottom: -5px;
-}
-
-html {
-    background-color: #;
-}
-
-body {
-    background-color: #fff;
-    padding: 30px 30px 30px;
-    max-width: 700px;
-    margin: 20px auto;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
-    border-radius: 3px;
-    position: relative;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.inner {
-max-width: 1000px;
-margin: 0 auto;
-padding: 0 40px;
-box-sizing: content-box;
-}
-.header {
-background: #fff;
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-}
-.header-inner {
-display: flex;
-align-items: center;
-}
-.header-title a{
-color: #4a47ff;
-font-size: 24px;
-font-weight: bold;
-}
-.header-nav {
-margin-left: auto;
-}
-.header-nav-list {
-display: flex;
-}
-.header-nav-item:not(:first-child){
-margin-left: 40px;
-}
-.header-nav-item-link {
-display: block;
-color: #4a47ff;
-height: 80px;
-line-height: 80px;
-}
-
-
-</style>
 <p>新作</p>
 <iframe id="sinnsaku" src="https://scratch.mit.edu/projects/926233142/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
 <br>
-<style>
-
-body {
-  background: #00ff15;
-}
-
-.bokin a {
-  color:#05f5cd;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-
-
-</style>
 <h4 id="kyouyuu">共有</h4>
 <a href="https://b.hatena.ne.jp/entry/s/https://simasimanekosan.github.io/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><div class="line-it-button" data-lang="ja" data-type="share-a" data-env="REAL" data-url="https://simasimanekosan.github.io/" data-color="default" data-size="small" data-count="false" data-ver="3" style="display: none;"></div>
 <script async defer src="https://buttons.github.io/buttons.js"><script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
